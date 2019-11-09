@@ -14,3 +14,5 @@ so we can give all UChicago data a central home.
 - Department pages for faculty 
 - College Advsiors/Career Advisors pages 
 - UChicago Twitter/Instagram/LinkedIn/FB
+- UChicago Events
+- IOP Events
