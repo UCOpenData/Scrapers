@@ -1,2 +1,3 @@
-install tweepy \n
+install tweepy
+
 install GetOldTweets3
