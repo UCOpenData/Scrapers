@@ -14,12 +14,9 @@ soup = BeautifulSoup(page.content, 'html.parser')
 
 
 text=soup.select(FRONT_PAGE_SELECTOR)
-    
-for i in range(len(text)):
-    try:
-        print(text["Author: " + text[i].get_text().split('\n')[1][5:
-        10]]=re.findall(r"By(.*)",text[i].get_text())[0])
-    except IndexError:
-        pass
+
+for i in text: 
+    print(i)
+    break; 
     
 
