@@ -1,0 +1,68 @@
+WEBSCRAPING Walkthrough  (adapted from dataquest.io)
+
+PART 1: Understanding some HTML
+
+HTML (Hypertext Markup Language)
+- language to create most webpages
+- example: 
+
+<html>
+	<head>
+	</head>
+	<body>
+		<p>
+		Here's a paragraph of text!
+		</p>
+		<p>
+		Here's a second paragraph of text!
+		</p>
+	</body>
+</html>
+
+- common tag meanings:
+<p> - paragraph
+<div> - division, or area of page
+<b> — bolds any text inside.
+<i> — italicizes any text inside
+<table> - table
+<li> list tag
+** <a href="___"> links that redirect to another webpage
+
+
+PART 2: Using Requests Library
+* requests * Python Library
+- Used to download webpages
+- example:
+
+import requests
+page = requests.get("http://dataquestio.github.io/web-scraping-pages/simple.html")
+
+- use page.content to see html code that you've downloaded
+
+'<!DOCTYPE html>\n
+<html>\n
+<head>\n
+<title>A simple example page</title>\n
+</head>\n
+<body>\n
+<p>Here is some simple content for this
+page.</p>\n
+</body>\n
+</html>'
+
+Part 3: Scraping with BeautifulSoup
+from bs4
+import BeautifulSoup as bs
+
+- soup = BeautifulSoup(page.content, 'html.parser')
+	> converts the entire html webpage into a Beautiful Soup object
+
+soup.select  (html tag / CSS Selectors)
+- majorsoup = soup.select("li a")
+	> returns a list 
+
+soup.find_all  (class/id tags selector)
+- all html elements can have classes or tags which essentially give them names
+- soup.find_all(class_="courseblocktitle").get_text()
+	> Returns a list of strings parsed by BeautifulSoup that fall under specified class
+
