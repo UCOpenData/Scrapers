@@ -18,6 +18,10 @@ The scrapers contained in this repo scrape data from all the different parts of 
     └── uchicago_tweets.py
 ```
 
+## To-Do 
+- [ ] Set up cron job to run regularly 
+- [ ] Making sure all scrapers work and are scraping completely 
+
 ## Scraper Ideas/In Progress 
 - [ ] Course Evaluations 
 - [ ] Blueprint 
