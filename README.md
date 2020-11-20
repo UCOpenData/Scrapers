@@ -5,10 +5,12 @@ The scrapers contained in this repo scrape data from all the different parts of 
 ├── README.md
 ├── college_catalog
 │   ├── CMSC\ prereq.py
-│   ├── WEBSCRAPING\ Walkthrough\ 
+│   ├── WEBSCRAPING_walkthrough.txt
 │   ├── cmscmap.png
-│   └── everymajor.py // all courses offered by major in 2019 
-├── maroon.py
+│   └── everymajor.py
+├── maroon
+│   ├── maroon.R
+│   └── maroon.py
 └── twitter
     ├── readme.md
     ├── twitter_credentials.json
