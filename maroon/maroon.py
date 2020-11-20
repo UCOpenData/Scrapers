@@ -15,8 +15,8 @@ soup = BeautifulSoup(page.content, 'html.parser')
 
 text=soup.select(FRONT_PAGE_SELECTOR)
 
+still_messy = [] 
 for i in text: 
-    print(i)
-    break; 
-    
+    still_messy.append(i.get_text().replace('\n', ''))
 
+print(still_messy[0:3]) # still whitespace, redundant elements 
