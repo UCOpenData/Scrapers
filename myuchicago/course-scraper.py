@@ -14,7 +14,7 @@ url = input('Enter URL: ')
 # Retrieve all of the anchor tags
 html = urlopen(url, context=ctx).read()
 soup = BeautifulSoup(html, "html.parser")
-tags = soup('a')
+tags = soup('table')
 
 for line in tags:
     print(line)
