@@ -9,13 +9,15 @@ ctx.verify_mode = ssl.CERT_NONE
 
 url = input('Enter URL: ')
 
-
-
 # Retrieve all of the anchor tags
 html = urlopen(url, context=ctx).read()
 soup = BeautifulSoup(html, "html.parser")
 tags = soup('table')
 
-for line in tags:
-    print(line)
 
+for table in tags:
+    lines = table.findAll("td")
+    for line in lines:
+        line = str(line)
+        line = line.split(">")[1].split("<")[0]
+        print(line)
