@@ -16,8 +16,13 @@ tags = soup('table')
 
 
 for table in tags:
-    lines = table.findAll("td")
-    for line in lines:
+    th = table.findAll("th")
+    for line in th:
+        line = str(line)
+        line = line.split(">")[1].split("<")[0]
+        print(line)
+    td = table.findAll("td")
+    for line in td:
         line = str(line)
         line = line.split(">")[1].split("<")[0]
         print(line)
