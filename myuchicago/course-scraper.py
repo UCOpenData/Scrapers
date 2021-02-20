@@ -15,6 +15,12 @@ soup = BeautifulSoup(html, "html.parser")
 tags = soup('table')
 
 
+h = soup.findAll("h2")
+for line in h:
+        line = str(line)
+        line = line.split(">")[1].split("<")[0]
+        print(line)
+
 for table in tags:
     th = table.findAll("th")
     for line in th:
