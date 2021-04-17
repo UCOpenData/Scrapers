@@ -29,6 +29,8 @@ def scrape_data(driver, source):
                 except:
                         try:
                                 line = line.split("Instructor(s)")
+                                classname = line[0].strip()
+                                instructor = line[1].strip()
                         except:
                                 classname = "NA"
                                 instructor = "NA"
