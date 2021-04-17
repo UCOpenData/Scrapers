@@ -67,7 +67,7 @@ def scroll(driver):
 	# scroll to end of page
 	html = driver.find_element_by_tag_name('html')
 	html.send_keys(Keys.END)
-	sleep(0.5)
+	#sleep(0.5)
 	driver.page_source
 
 def write_to_csv(subject, year, term, link, writer, classname, instructor, mean, raw):

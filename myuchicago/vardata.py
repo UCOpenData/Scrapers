@@ -1,4 +1,4 @@
-output_file_name = 'data.csv'
+output_file_name = 'data_temp.csv'
 driver_path = '/Users/bhakti/Downloads/chromedriver'
 subjects = ["AANL",
             "AASR",

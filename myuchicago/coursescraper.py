@@ -35,7 +35,10 @@ def scrape_data(driver, source):
         try:
                 lst = pd.read_html(source, "instructor")
         except:
-                flag = 1
+                try:
+                        lst = pd.read_html(source, "course")
+                except: 
+                        flag = 1
         if flag == 0:
                 for df in lst:
                         if "Comments" in df.columns:
