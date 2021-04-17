@@ -27,8 +27,11 @@ def scrape_data(driver, source):
                         classname = line[0].strip()
                         instructor = line[1].strip()
                 except:
-                        classname = "NA"
-                        instructor = "NA"
+                        try:
+                                line = line.split("Instructor(s)")
+                        except:
+                                classname = "NA"
+                                instructor = "NA"
 
         #iterates through all tables to find tags
         mean = "NA"
