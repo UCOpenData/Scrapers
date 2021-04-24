@@ -22,7 +22,14 @@ def scrape_data(driver, source):
                 line = str(line)
                 raw = line
                 line = line.split(">")[1].split("<")[0]
-                line = line.split("Instructor(s):")
+                if "Instructor(s):  " in line:
+                        line = line.split("Instructor(s):  ")
+                elif "Instructor(s): " in line:
+                        line = line.split("Instructor(s): ")
+                elif "Instructor(s)  " in line:
+                        line = line.split("Instructor(s)  ")
+                elif "Instructor(s) " in line:
+                        line = line.split("Instructor(s) ")
                 try:
                         classname = line[0].strip()
                         instructor = line[1].strip()
